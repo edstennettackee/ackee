@@ -1,0 +1,18 @@
+/* ==============================================================================================
+ TOOLS
+ Globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+================================================================================================= */
+
+// Convert px to rem. This allows us to either include the px unit or not in the function call.
+@function calculate-rem($pixels, $context: $default-font-size) {
+
+ @if (unitless($pixels)) {
+   $pixels: $pixels * 1px;
+ }
+
+ @if (unitless($context)) {
+   $context: $context * 1px;
+ }
+
+ @return $pixels / $context * 1rem;
+}

@@ -1,0 +1,44 @@
+ /* ========================================================================================================================================
+  COMPONENTS
+  Specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
+=========================================================================================================================================== */ 
+
+/* Homepage */
+
+/* Nav */
+
+@media (min-width: 768px) {
+.navbar-logo {
+    background: url(../img/white_ackee_logo.svg) left no-repeat;
+    background-size: contain;
+    }}
+
+#particles-js {
+    background: $primaryColor;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 80vh;
+}
+
+.hero {
+    width: 100vw;
+    height: 80vh;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.white-text {
+    color: $white;
+}
+
+.intro {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100vw;
+}
