@@ -1,7 +1,7 @@
 {
-  "name": "test",
+  "name": "ackee",
   "version": "1.0.0",
-  "description": "this is my test site",
+  "description": "ackee website - personal portfolio for Ed Stennett",
   "main": "index.js",
   "directories": {
     "doc": "doc"
