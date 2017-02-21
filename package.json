@@ -21,6 +21,7 @@
     "gulp-sass": "file:node_modules/gulp-sass",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.0.1",
-    "gulp-watch": "^4.3.11"
+    "gulp-watch": "^4.3.11",
+    "node-sass": "^4.5.0"
   }
 }
