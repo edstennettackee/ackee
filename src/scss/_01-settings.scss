@@ -6,10 +6,19 @@
 $black: #000000;
 $white: #ffffff;
 
-// Brand colours
+// Brand colours - default colour names given incase of change
 
 $primaryColor: #1d252d;
-$secondaryColor: #00ff00;
+$accent: #A42AAD;
+$secondaryColor: #4A5157;
+
+// Greys - names all have 'grey' in - not best practise with SASS but even if primary colour change, there will still be a need for some sort of acceptable grey palette
+
+$darkGreyOne: #777c81;
+$darkGreyTwo: #A5A8AB;
+$standardGrey: #D2D3D5;
+$lightGreyOne: #F6F6F7;
+$lightGreyTwo: #FAFAFA;
 
 $default-font-size: 16;
 
