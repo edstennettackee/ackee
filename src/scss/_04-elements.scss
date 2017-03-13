@@ -90,7 +90,7 @@ a {
 
 a:hover,
 a:focus {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:focus {
@@ -107,3 +107,20 @@ li {
     color: #ffffff;
 }
 
+nav ul {
+    overflow: hidden;
+    color: $white;
+    text-align: right;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+}
+
+nav ul li:hover {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: $lightGreyTwoOpaque;
+}
