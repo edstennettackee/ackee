@@ -86,11 +86,14 @@ a {
     font-size: 16px;
     font-family: $body;
     text-decoration: none;
+    color: inherit;
+    font-weight: bold;
 }
 
 a:hover,
 a:focus {
     text-decoration: none;
+    color: inherit;
 }
 
 a:focus {
@@ -107,11 +110,14 @@ li {
     color: #ffffff;
 }
 
+
 nav ul {
     overflow: hidden;
     color: $white;
+    padding: 0;
     text-align: right;
     margin: 0;
+    transition: max-height 0.4s;
 }
 
 nav ul li {
@@ -120,7 +126,6 @@ nav ul li {
 }
 
 nav ul li:hover {
-    text-decoration: none;
-    font-weight: bold;
-    background-color: $lightGreyTwoOpaque;
+    background-color: $white;
+    color: $primaryColor;
 }

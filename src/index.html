@@ -22,21 +22,22 @@
         <![endif]-->
     <section>
         <nav class="navbar navbar-logo">
-            <div class="">
-                <ul class="">
-                    <li>
-                        <a class="text-white" href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Work</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
-                    </li>
-                </ul>
+            <ul>
+                <li>
+                    <a class="text-white" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="#">Work</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+            </ul>
+            <div class="menu-handle navbar-logo">
+                <img src="img/menu-icon.svg" alt="menu icon (hamburger style)" style="width: 2em;">
             </div>
         </nav>
         <header>
@@ -73,6 +74,11 @@
         }(window, document, 'script', 'ga'));
         ga('create', 'UA-XXXXX-X', 'auto');
         ga('send', 'pageview');
+    </script>
+    <script>
+        $('.menu-handle').on('click', function() {
+            $('nav ul').toggleClass('menu-visible');
+        });
     </script>
 </body>
 
