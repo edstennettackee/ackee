@@ -19,7 +19,7 @@ html {
  */
 
 ::-moz-selection {
-    background: #A42AAD;
+    background: $accent;
     text-shadow: none;
 }
 
@@ -37,9 +37,9 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+    border-top: 1px solid $standardGrey;
+    padding: 20px;
+    width: 75%;
 }
 
 
@@ -101,9 +101,24 @@ a:focus {
     outline-offset: -2px;
 }
 
-h1 {
+h1{
     font-family: $heading;
     font-size: 42px;
+}
+
+h2 {
+    font-family: $heading;
+    font-size: 36px;
+}
+
+h3 {
+    font-family: $heading;
+    font-size: 20px;
+}
+
+p {
+    font-family: $body;
+    font-size: 16px;
 }
 
 li {
