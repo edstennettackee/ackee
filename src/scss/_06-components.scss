@@ -1,100 +1,130 @@
  /* ========================================================================================================================================
   COMPONENTS
   Specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
-=========================================================================================================================================== */ 
-
-/* Homepage */
-
-/* Nav */
-
-@media (min-width: 768px) {
-.navbar-logo {
-    background: url(../img/white_ackee_logo.svg) left no-repeat;
-    background-size: 10rem;
-    }}
-
-@media (max-width: 768px) {
-.navbar-logo {
-    background: url(../img/white_ackee_icon.svg) left no-repeat;
-    background-size: 4rem;
-    }}
-
-.navbar {
-    position: relative;
-    z-index: 2;
-}
-
-.menu-handle {
+=========================================================================================================================================== */
+ /* Homepage */
+ /* Nav */
+ 
+ @media (min-width: 768px) {
+     .navbar-logo {
+         background: url(../img/white_ackee_logo.svg) left no-repeat;
+         background-size: 10rem;
+     }
+ }
+ 
+ @media (max-width: 768px) {
+     .navbar-logo {
+         background: url(../img/white_ackee_icon.svg) left no-repeat;
+         background-size: 4rem;
+     }
+ }
+ 
+ .navbar {
+     position: relative;
+     z-index: 2;
+ }
+ 
+ .menu-handle {
+     width: 100%;
+     background-color: $primaryColor;
+     text-align: right;
+     box-sizing: border-box;
+     padding: 15px 10px;
+     cursor: pointer;
+     color: $white;
+     display: none;
+ }
+ 
+ @media screen and (max-width: 580px) {
+     nav ul {
+         max-height: 0px;
+     }
+     .menu-visible {
+         max-height: 20em;
+         background: $darkGreyOne;
+     }
+     nav ul li {
+         width: 100%;
+         box-sizing: border-box;
+         padding: 15px;
+         text-align: right;
+         background: $darkGreyOne;
+     }
+     .menu-handle {
+         display: block;
+     }
+ }
+ /* Header */
+ 
+ #particles-js {
+     background-image: url('../img/hero-image.jpg');
+     background-size: cover;
+     background-position: 50% 50%;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     height: 80vh;
+ }
+ 
+ .hero {
+     width: 100vw;
+     height: 80vh;
+     overflow: hidden;
+     position: absolute;
+     left: 0;
+     top: 0;
+ }
+ 
+ .hero-height {
+     height: 80vh;
+ }
+ 
+ .white-text {
+     color: $white;
+ }
+ 
+ .intro {
+     position: absolute;
+     left: 0;
+     top: 40%;
+     width: 100vw;
+ }
+ /* Body */
+ 
+ .central-text-intro {
+     margin-top: 2em;
+     text-align: center;
+     height: 250px;
+ }
+ 
+.image-blur {
     width: 100%;
-    background-color: $primaryColor;
-    text-align: right;
-    box-sizing: border-box;
-    padding: 15px 10px;
-    cursor: pointer;
-    color: $white;
-    display: none;
-}
-
-
-@media screen and (max-width: 580px) {
-    nav ul {
-        max-height: 0px;
-    }
-    .menu-visible {
-        max-height: 20em;
-        background: $darkGreyOne;
-    }
-    nav ul li { 
-        width: 100%;
-        box-sizing: border-box;
-        padding: 15px;
-        text-align: right;
-        background: $darkGreyOne;
-    }
-    .menu-handle{ 
-        display: block;
-    }
-}
-
-/* Header */
-
-#particles-js {
-    background-image: url('../img/hero-image.jpg');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 80vh;
-}
-
-.hero {
-    width: 100vw;
-    height: 80vh;
+    height: 100%;
     overflow: hidden;
-    position: absolute;
-    left: 0;
-    top: 0;
 }
 
-.hero-height {
-    height: 80vh;
-}
-
-.white-text {
-    color: $white;
-}
-
-.intro {
-    position: absolute;
-    left: 0;
-    top: 40%;
-    width: 100vw;
-}
-
-
-/* Body */
-
-.central-text-intro {
-    margin-top: 2em;
-    text-align: center;
-}
+.image-blur img {
+  height: 100%;
+  width: 100%;
+     transition: all 0.4s ease;
+     filter: blur(0);
+     -webkit-filter: blur(0);
+     -moz-filter: blur(0);
+     -o-filter: blur(0);
+     -ms-filter: blur(0);
+     -ms-filter: blur(0px);
+     /*filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0'); */
+ }
+ 
+ .image-blur img:hover {
+     -moz-transform: scale(1.5);
+     -webkit-transform: scale(1.5);
+     -o-transform: scale(1.5);
+     transform: scale(1.5);
+     filter: blur(10px);
+     -webkit-filter: blur(10px);
+     -moz-filter: blur(10px);
+     -o-filter: blur(10px);
+     -ms-filter: blur(10px);
+     filter: url(#blur1);
+     filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
+ }
