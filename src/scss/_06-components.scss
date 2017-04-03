@@ -1,4 +1,4 @@
- /* ========================================================================================================================================
+     /* ========================================================================================================================================
   COMPONENTS
   Specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
 =========================================================================================================================================== */
@@ -76,6 +76,7 @@
  
  .hero-height {
      height: 80vh;
+     padding: 0;
  }
  
  .white-text {
@@ -93,38 +94,207 @@
  .central-text-intro {
      margin-top: 2em;
      text-align: center;
+     min-height: 250px;
+ }
+ 
+ .text-block {
+     min-height: 300px;
+ }
+ 
+ .divider {
+     margin-top: 50px;
+ }
+ 
+ .left-text-intro {
+     margin-top: 2em;
+     text-align: left;
      height: 250px;
  }
  
-.image-blur {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.image-blur img {
-  height: 100%;
-  width: 100%;
-     transition: all 0.4s ease;
+ .right-text-intro {
+     margin-top: 2em;
+     text-align: right;
+     height: 250px;
+ }
+ 
+ .image-blur {
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+     position: relative;
+ }
+ 
+ .image-blur img {
+     height: 100%;
+     width: 100%;
+     transition: all 0.4s ease-in-out;
      filter: blur(0);
-     -webkit-filter: blur(0);
-     -moz-filter: blur(0);
-     -o-filter: blur(0);
-     -ms-filter: blur(0);
-     -ms-filter: blur(0px);
-     /*filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0'); */
  }
  
  .image-blur img:hover {
-     -moz-transform: scale(1.5);
-     -webkit-transform: scale(1.5);
-     -o-transform: scale(1.5);
      transform: scale(1.5);
      filter: blur(10px);
-     -webkit-filter: blur(10px);
-     -moz-filter: blur(10px);
-     -o-filter: blur(10px);
-     -ms-filter: blur(10px);
      filter: url(#blur1);
-     filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
  }
+ 
+ @media (min-width: 970px) {
+     .caption {
+         z-index: 3;
+         opacity: 0;
+         display: block;
+         position: absolute;
+         color: $white;
+         padding-left: 40px;
+         transition: all 0.4s ease-in-out;
+         top: 70%;
+         h3 {
+             margin: 0;
+         }
+         p {
+             font-size: 12px;
+         }
+     }
+ }
+ 
+ @media (max-width: 970px) {
+     .caption {
+         z-index: 3;
+         opacity: 0;
+         display: block;
+         position: absolute;
+         color: $white;
+         padding-left: 40px;
+         transition: all 0.4s ease-in-out;
+         top: 50%;
+         h3 {
+             margin: 0;
+         }
+         p {
+             font-size: 12px;
+         }
+     }
+ }
+ 
+ a:hover .caption {
+     opacity: 1;
+ }
+ 
+ .contact-hero {
+     position: absolute;
+ }
+ 
+ .contact-form {
+     position: relative;
+     background-image: url(../img/contact-hero.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+ }
+ 
+ .quotation {
+     margin-bottom: -30px;
+     color: $accent;
+ }
+ 
+ .contact-heading {
+     margin-top: 0px;
+     color: $white;
+ }
+ 
+ .footer {
+     background-color: $primaryColor;
+     padding-top: 0px;
+     color: $white;
+ }
+ /* Inputs */
+ 
+ .group {
+     position: relative;
+     margin-bottom: 45px;
+ }
+ 
+ /* BOTTOM BARS ================================= */
+ 
+ .bar {
+     position: relative;
+     display: block;
+     width: 300px;
+ }
+ 
+ .bar:before,
+ .bar:after {
+     content: '';
+     height: 2px;
+     width: 0;
+     bottom: 1px;
+     position: absolute;
+     background: $accent;
+     transition: 0.2s ease all;
+ }
+ 
+ .bar:before {
+     left: 50%;
+ }
+ 
+ .bar:after {
+     right: 50%;
+ }
+ 
+ .highlight {
+     position: absolute;
+     height: 60%;
+     width: 100px;
+     top: 25%;
+     left: 0;
+     pointer-events: none;
+     opacity: 0.5;
+ }
+ 
+/* Button */
+ 
+ .md-button {
+     display: inline-block;
+     position: relative;
+     background: $white;
+     width: 150px;
+     height: 50px;
+     color: $primaryColor;
+     text-decoration: none;
+     text-transform: lowercase;
+     margin: 1rem;
+     border-radius: 2px;
+     font-family: $heading;
+     font-size: 20px;
+     outline: none;
+     border: 0px;
+ }
+ 
+ .md-button span {
+     width: 100%;
+     text-align: center;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 9999;
+     pointer-events: none;
+     outline: none;
+     border: 0px;
+ }
+ 
+ .md-button canvas {
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: 4;
+     border-radius: 2px;
+     outline: none;
+ }
+ 
+.footer-icon {
+    height: 4rem;
+    padding-top: 0.4em;
+}
+
+.footer-text {
+    padding-right: 80px;
+}

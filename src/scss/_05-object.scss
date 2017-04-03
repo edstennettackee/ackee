@@ -12,6 +12,30 @@
 }
 
 
+/* Screenreader class from bootstrap, specifically for A11y */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto
+}
+
+
 /* Grid System based on Skeleton.css
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
@@ -79,6 +103,9 @@
         width: 39.3333333333%;
     }
     .six.columns {
+        width: 48%;
+    }
+    .six-no-padding.columns {
         width: 50%;
     }
     .seven.columns {
@@ -189,5 +216,5 @@
 .img-responsive {
     max-width: 100%;
     height: auto;
-    display:block;
+    display: block;
 }
