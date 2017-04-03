@@ -119,10 +119,10 @@
             <h3 class="contact-heading">want to make<br> something beautiful?</h3>
 
 
-            <form id="signup">
+            <form method="POST" action="http://formspree.io/edward.stennett@ackeecreative.com">
 
                 <div class="group">
-                    <input type="text" id="name" required>
+                    <input type="text" name="name" required>
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label class="sr-only" for="emailAddress">Name</label>
@@ -130,7 +130,7 @@
                 </div>
 
                 <div class="group">
-                    <input type="text" id="emailAddress" required>
+                    <input type="text" name="emailAddress" required>
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label class="sr-only" for="emailAddress">Email address</label>
@@ -138,7 +138,7 @@
                 </div>
 
                 <div class="group">
-                    <textarea name="Message" id="message" cols="40" rows="5" required></textarea>
+                    <textarea name="message" cols="40" rows="5" required></textarea>
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <label class="sr-only" for="emailAddress">Message</label>
@@ -151,13 +151,6 @@
                 </button>
 
             </form>
-
-<!--
-            <a href="#" class="md-button">
-                <span>send</span>
-                <canvas class="md-button-canvas"></canvas>
-            </a>
--->
         </div>
 
     </section>
