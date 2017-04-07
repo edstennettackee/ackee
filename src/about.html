@@ -76,7 +76,7 @@
             </div>
             <div class="six columns right-text-intro">
                 <h3 class="invisible">clients</h3>
-                <p>Clients worked for include: Abbvie, uWork, Merck, Sanofi Genzyme, Novartis, Sanofi, Shire, Allergan, Celgene, Daitchi Sankyo, Ipsen, MedPharm, Jazz, Pierre Fabre, Terumo, Vertex</p>
+                <p>Clients worked for include: Abbvie, uWork, Merck, Sanofi Genzyme, Novartis, Sanofi, Shire, Allergan, Celgene, Daiitchi Sankyo, Ipsen, MedPharm, Jazz, Pierre Fabre, Terumo, Vertex</p>
             </div>
         </div>
     </section>
@@ -84,15 +84,18 @@
     <section>
         <div class="wrapper">
             <div class="container">
-                <video class="showreel-video" id="video1" controls poster="img/showreel-poster.jpg">
+                <!--                <video class="showreel-video" id="video" poster="img/showreel-poster.jpg">-->
+                <video class="showreel" id="video1" poster="img/showreel-poster.jpg">
                 <source src="img/ackee-showreel.mp4" type="video/mp4"/>
                 <source src="img/ackee-showreel.webm" type="video/webm"/>
                 <source src="img/ackee-showreel.ogg" type="video/ogg"/>
             </video>
+                <!--                <button class="media-overlay" type="button"></button>-->
+                <a class="video-control js-video-control paused" href="#" data-video="video1"></a>
             </div>
-            <a class="video-control js-video-control paused" href="#" data-video="video1"></a>
         </div>
     </section>
+
 
     <section class="contact-form">
         <div class="twelve columns contact-hero ">
@@ -180,6 +183,28 @@
     <script>
         $('.menu-handle').on('click', function() {
             $('nav ul').toggleClass('menu-visible');
+        });
+    </script>
+
+    <script>
+        function playVideo(el) {
+            var videoId = el.data('video');
+            var video = document.getElementById(videoId);
+
+            if (video.paused) {
+                // Play the video
+                video.play();
+                el.removeClass('paused').addClass('playing');
+            } else {
+                // Pause the video
+                video.pause();
+                el.removeClass('playing').addClass('paused');
+            }
+        }
+
+        $(document).on('click', '.js-video-control', function(e) {
+            playVideo($(this));
+            e.preventDefault();
         });
     </script>
 </body>
