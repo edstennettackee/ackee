@@ -98,9 +98,16 @@
  }
  
  .text-block {
-     min-height: 300px;
+     min-height: 500px;
  }
  
+.small-text-block {
+    min-height: 250px;
+}
+
+.grey-text-block {
+    background-color: $lightGreyTwo;
+}
  .divider {
      margin-top: 50px;
  }
@@ -109,12 +116,14 @@
      margin-top: 2em;
      text-align: left;
      height: 250px;
+     padding-right: 40px;
  }
  
  .right-text-intro {
      margin-top: 2em;
      text-align: right;
      height: 250px;
+     padding-left: 40px;
  }
  
  .image-blur {
@@ -297,4 +306,63 @@
 
 .footer-text {
     padding-right: 80px;
+}
+
+/* About page */
+
+.about-hero {
+    background-image: url('../img/dark-image-hero.jpg');
+     background-size: cover;
+     background-position: 50% 50%;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     height: 80vh;
+}
+
+.showreel-video {
+    width: 100%;
+}
+
+.video-control {
+  font-size: 4em;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: #333;
+  text-align: center;
+
+  
+  &:hover {
+    opacity: 1;
+  }
+  
+  &:before, &:after {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    top: 50%;
+    left: 50%;
+    margin: -0.5em 0 0 -0.5em;
+    
+  }
+  
+  &:before {
+    content: '\25BA';
+  }
+  
+  &:after {
+    content: 'll';
+    font-weight: 700;
+  }
+  
+  &.paused {
+    &:after {
+      opacity: 0;
+    }
+  }
+  
+  &.playing {
+    &:before {
+      opacity: 0;
+    }
+  }
 }
