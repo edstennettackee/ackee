@@ -318,8 +318,13 @@ a:hover .caption {
     padding-top: 0.4em;
 }
 
-.footer-text {
+.footer-padding {
     padding-right: 80px;
+}
+
+.footer-text {
+    padding-top: 10px;
+    font-size: 12px;
 }
 
 
@@ -410,3 +415,15 @@ a:hover .caption {
     }
   }
 }
+
+//.work-item-1 {
+//    background-image: url(../img/ackee-hero.png);
+//    background-position: cover;
+//    background-repeat: no-repeat;
+//}
+//
+//.work-item-2 {
+//    background-image: url(../img/dark-image-hero.jpg);
+//    background-position: cover;
+//    background-repeat: no-repeat;
+//}

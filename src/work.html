@@ -40,53 +40,71 @@
                 <img src="img/menu-icon.svg" alt="menu icon (hamburger style)" style="width: 2em;">
             </div>
         </nav>
-        <div class="hero">
-            <div class="about-hero">
-                <span class="text-center white-text intro"><img src="img/white_ackee_icon.svg" style="width: 20em;" alt="white ackee icon"></span>
+        <div class="gallery hero autoplay items-3">
+            <div id="item-1" class="control-operator"></div>
+            <div id="item-2" class="control-operator"></div>
+            <div id="item-3" class="control-operator"></div>
+
+            <figure class="item work-item-1">
+                <!--<img class="img-responsive" src="img/dark-image-hero.jpg">-->
+            </figure>
+
+            <figure class="item work-item-2">
+<!--                <img class="img-responsive" src="img/ackee-hero.png">-->
+            </figure>
+
+            <figure class="item work-item-1">
+<!--                <img class="img-responsive" src="img/cgm-hero.png">-->
+            </figure>
+
+            <div class="controls">
+                <a href="#item-1" class="control-button">•</a>
+                <a href="#item-2" class="control-button">•</a>
+                <a href="#item-3" class="control-button">•</a>
             </div>
         </div>
     </section>
 
     <section>
         <div class="container">
-        <div class="six-no-padding columns image-blur">
-            <a href="#">
-                <span class="caption"> <h3>uWork</h3>
+            <div class="six-no-padding columns image-blur">
+                <a href="#">
+                    <span class="caption"> <h3>uWork</h3>
                     <hr class="hr-full-width">
                     <p>Design   |   Branding</p></span>
-                <img src="img/uwork-hero.png" class="img-responsive" alt="uwork logo on green background">
-            </a>
-        </div>
-        <div class="six-no-padding columns image-blur">
-            <a href="#">
-                <span class="caption"> <h3>uWork</h3>
+                    <img src="img/uwork-hero.png" class="img-responsive" alt="uwork logo on green background">
+                </a>
+            </div>
+            <div class="six-no-padding columns image-blur">
+                <a href="#">
+                    <span class="caption"> <h3>uWork</h3>
                     <hr class="hr-full-width">
                     <p>Design   |   Branding</p></span>
-                <img src="img/ackee-hero.png" class="img-responsive" alt="ackee logo on dark background">
-            </a>
-        </div>
-        <div class="six-no-padding columns image-blur">
-            <a href="#">
-                <span class="caption"> <h3>uWork</h3>
+                    <img src="img/ackee-hero.png" class="img-responsive" alt="ackee logo on dark background">
+                </a>
+            </div>
+            <div class="six-no-padding columns image-blur">
+                <a href="#">
+                    <span class="caption"> <h3>uWork</h3>
                     <hr class="hr-full-width">
                     <p>Design   |   Branding</p></span>
-                <img src="img/jf-hero.png" class="img-responsive" alt="dark image from James Falconer's site with a lightbulb">
-            </a>
-        </div>
-        <div class="six-no-padding columns image-blur">
-            <a href="#">
-                <span class="caption"> <h3>uWork</h3>
+                    <img src="img/jf-hero.png" class="img-responsive" alt="dark image from James Falconer's site with a lightbulb">
+                </a>
+            </div>
+            <div class="six-no-padding columns image-blur">
+                <a href="#">
+                    <span class="caption"> <h3>uWork</h3>
                     <hr class="hr-full-width">
                     <p>Design   |   Branding</p></span>
-                <img src="img/cgm-hero.png" class="img-responsive" alt="young couple smiling from cgm site">
-            </a>
-        </div>
-        <svg width="100%" height="10px" xmlns="http://www.w3.org/2000/svg">
+                    <img src="img/cgm-hero.png" class="img-responsive" alt="young couple smiling from cgm site">
+                </a>
+            </div>
+            <svg width="100%" height="10px" xmlns="http://www.w3.org/2000/svg">
             <filter id="blur1">
                 <feGaussianBlur stdDeviation="3"/>
             </filter>
         </svg>
-            </div>
+        </div>
     </section>
 
 
@@ -136,12 +154,12 @@
     </section>
 
     <footer class="global-footer">
-        <div class="container fooer">
-            <div class="one column footer-text">
+        <div class="container">
+            <div class="one column footer-padding">
                 <img class="footer-icon" src="img/white_ackee_icon.svg" alt="ackee icon">
             </div>
             <div class="eleven columns">
-                <p>Copyright 2017 ackee creative<br> Website designed and handcoded by Ed Stennett</p>
+                <p class="footer-text">Copyright 2017 ackee creative<br> Website designed and handcoded by Ed Stennett</p>
             </div>
         </div>
     </footer>
@@ -177,28 +195,6 @@
     <script>
         $('.menu-handle').on('click', function() {
             $('nav ul').toggleClass('menu-visible');
-        });
-    </script>
-
-    <script>
-        function playVideo(el) {
-            var videoId = el.data('video');
-            var video = document.getElementById(videoId);
-
-            if (video.paused) {
-                // Play the video
-                video.play();
-                el.removeClass('paused').addClass('playing');
-            } else {
-                // Pause the video
-                video.pause();
-                el.removeClass('playing').addClass('paused');
-            }
-        }
-
-        $(document).on('click', '.js-video-control', function(e) {
-            playVideo($(this));
-            e.preventDefault();
         });
     </script>
 </body>
