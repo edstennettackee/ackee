@@ -241,11 +241,32 @@
 .gallery .item {
   overflow: hidden;
   text-align: center;
-    background-image: url(../img/ackee-hero.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%, 50%;
 }
+
+.image-one {
+    background-image: url(../img/cgm-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%, 50%;
+}
+
+.image-two {
+    background-image: url(../img/uwork-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%, 50%;
+}
+
+.image-three {
+    background-image: url(../img/jf-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%, 50%;
+}
+
 .gallery .controls {
   position: absolute;
   bottom: 0;
