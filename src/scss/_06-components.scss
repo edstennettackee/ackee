@@ -63,14 +63,17 @@
 /* Header */
 
 #particles-js {
-    background-image: url('../img/hero-image.jpg');
+    
+}
+
+.homepage-hero {
+    background-color: $primaryColor;
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 80vh;
 }
-
 .hero {
     width: 100vw;
     height: 80vh;
