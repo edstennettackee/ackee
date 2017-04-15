@@ -38,6 +38,11 @@ gulp.task('html', function(){
 		.pipe(gulp.dest('./dist'));
 });
 
+gulp.task('html', function(){
+	return gulp.src('./src/work/*.html')
+		.pipe(gulp.dest('./dist/work'));
+});
+
 gulp.task('img', function () {
     return gulp.src('./src/img/*')
         .pipe(gulp.dest('./dist/img'));
