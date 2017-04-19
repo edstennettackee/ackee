@@ -62,9 +62,7 @@
 
 /* Header */
 
-#particles-js {
-    
-}
+#particles-js {}
 
 .homepage-hero {
     background-color: $primaryColor;
@@ -74,11 +72,13 @@
     background-attachment: fixed;
     height: 80vh;
 }
+
 .hero {
     width: 100vw;
     height: 80vh;
     overflow: hidden;
     position: absolute;
+    background-position: 50% 50%;
     left: 0;
     top: 0;
 }
@@ -97,6 +97,14 @@
     left: 0;
     top: 40%;
     width: 100vw;
+}
+
+.sub-intro {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100vw;
+    padding-top: 90px;
 }
 
 
@@ -364,69 +372,57 @@ a:hover .caption {
 }
 
 .showreel {
-  margin: 1em auto;
-  display: block;
-  position: relative;
-  max-width: 100%;
-  
-  &:hover {
-   + .video-control {
-     opacity: 0.8;
-   }
-  }
+    margin: 1em auto;
+    display: block;
+    position: relative;
+    max-width: 100%;
+    &:hover {
+        +.video-control {
+            opacity: 0.8;
+        }
+    }
 }
 
 .video-control {
-  font-size: 4em;
-  opacity: 0;
-  transition: opacity 0.3s;
-  color: #333;
-  text-align: center;
-
-  
-  &:hover {
-    opacity: 1;
-  }
-  
-  &:before, &:after {
-    position: absolute;
-    width: 1em;
-    height: 1em;
-    top: 50%;
-    left: 50%;
-    margin: -0.5em 0 0 -0.5em;
-    
-  }
-  
-  &:before {
-    content: url(../img/play-button.svg);
-  }
-  
-  &:after {
-    content: url(../img/pause-button.svg);
-  }
-  
-  &.paused {
+    font-size: 4em;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: #333;
+    text-align: center;
+    &:hover {
+        opacity: 1;
+    }
+    &:before,
     &:after {
-      opacity: 0;
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        top: 50%;
+        left: 50%;
+        margin: -0.5em 0 0 -0.5em;
     }
-  }
-  
-  &.playing {
     &:before {
-      opacity: 0;
+        content: url(../img/play-button.svg);
     }
-  }
+    &:after {
+        content: url(../img/pause-button.svg);
+    }
+    &.paused {
+        &:after {
+            opacity: 0;
+        }
+    }
+    &.playing {
+        &:before {
+            opacity: 0;
+        }
+    }
 }
 
-//.work-item-1 {
-//    background-image: url(../img/ackee-hero.png);
-//    background-position: cover;
-//    background-repeat: no-repeat;
-//}
-//
-//.work-item-2 {
-//    background-image: url(../img/dark-image-hero.jpg);
-//    background-position: cover;
-//    background-repeat: no-repeat;
-//}
+.portfolio-image-block {
+    height: 40vh;
+    width: 100vw;
+    background-size: cover;
+    position: relative;
+    background-position: 50% 50%;
+}
