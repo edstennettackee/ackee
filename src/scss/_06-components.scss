@@ -79,8 +79,10 @@
     overflow: hidden;
     position: absolute;
     background-position: 50% 50%;
+    background-repeat: no-repeat;
     left: 0;
     top: 0;
+        background-size: cover;
 }
 
 .hero-height {
