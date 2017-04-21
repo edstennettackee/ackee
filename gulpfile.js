@@ -13,15 +13,14 @@ var uglify = require('gulp-uglify');
 
  
 gulp.task('sass', function () {
-  return gulp.src('./src/scss/main.scss')
-  	.pipe(plumber())
-    .pipe(autoprefixer({
-      browsers: ['IE >= 8', 'last 2 Firefox versions', 'Safari >= 6', 'last 2 Chrome versions', 'last 2 Edge versions']
-    })) 
-    .pipe(sass().on('error', sass.logError))
-    .pipe(cleanCSS())
-    .pipe(sourcemaps.init())
-    .pipe(gulp.dest('./dist/css'));	
+  	return gulp.src('./src/scss/main.scss')
+	  	.pipe(plumber())
+	  	.pipe(autoprefixer({
+	        browsers: ['last 2 versions'],
+	    }))
+	    .pipe(sass().on('error', sass.logError))
+	    .pipe(cleanCSS())
+	    .pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('js', function () {
