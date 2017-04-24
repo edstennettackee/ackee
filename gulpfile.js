@@ -42,6 +42,11 @@ gulp.task('img', function () {
         .pipe(gulp.dest('./dist/img'));
 });
 
+gulp.task('png', function () {
+    return gulp.src('./*.png')
+        .pipe(gulp.dest('./dist/'));
+});
+
 gulp.task('watch', function () {
   gulp.watch('./src/scss/*.scss', ['sass']);
   gulp.watch('./src/*.html', ['html']);
@@ -62,4 +67,4 @@ function connectOptions(browser, port, live) {
 
 gulp.task('connect', connect.server(connectOptions('Google Chrome', 8000, 35729)));
 
-gulp.task('default', ['sass', 'html', 'js', 'img', 'connect', 'watch'])
+gulp.task('default', ['sass', 'html', 'js', 'img', 'png', 'connect', 'watch'])
