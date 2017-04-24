@@ -66,8 +66,8 @@
     <section>
         <div class="central-text-intro container">
             <div class="twelve columns">
-                <h3 class="fade-in">ackee is the portfolio of Ed Stennett</h3>
-                <p class="fade-in">ackee is a site designed to showcase work by Winchester based UX Designer Ed Stennett. With over three years agency experience and a strong passion for pixel perfect design and beatiful user experiences, the site showcases recent work, concepts and ideas.</p>
+                <h3>ackee is the portfolio of Ed Stennett</h3>
+                <p>ackee is a site designed to showcase work by Winchester based UX Designer Ed Stennett. With over three years agency experience and a strong passion for pixel perfect design and beatiful user experiences, the site showcases recent work, concepts and ideas.</p>
                 <hr class="divider">
             </div>
         </div>
@@ -126,12 +126,12 @@
     <section>
         <div class="container text-block">
             <div class="six columns left-text-intro">
-                <h3 class="fade-in">services</h3>
-                <p class="fade-in">Ed Stennett is currently the Technical Director at ACHiiVE, an innovative agency in Winchester, Hampshire. He is responsible for the technical and creative output of the company, providing creative direction, presenting creative concepts and rationalé to key clients on a glabal scale.</p>
+                <h3>services</h3>
+                <p>Ed Stennett is currently the Technical Director at ACHiiVE, an innovative agency in Winchester, Hampshire. He is responsible for the technical and creative output of the company, providing creative direction, presenting creative concepts and rationalé to key clients on a glabal scale.</p>
             </div>
             <div class="six columns right-text-intro">
                 <h3 class="invisible">skills</h3>
-                <p class="fade-in">Branding and rebranding<br> Web design and development<br> User interface design and user expierience design<br> Grahpic and print design<br> 2D and 3D Animation</p>
+                <p class="fade-out">Branding and rebranding<br> Web design and development<br> User interface design and user expierience design<br> Grahpic and print design<br> 2D and 3D Animation</p>
             </div>
         </div>
     </section>
@@ -209,53 +209,25 @@
         });
     </script>
     <script>
-        (function(b, o, i, l, e, r) {
-            b.GoogleAnalyticsObject = l;
-            b[l] || (b[l] =
-                function() {
-                    (b[l].q = b[l].q || []).push(arguments)
-                });
-            b[l].l = +new Date;
-            e = o.createElement(i);
-            r = o.getElementsByTagName(i)[0];
-            e.src = 'https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e, r)
-        }(window, document, 'script', 'ga'));
-        ga('create', 'UA-97851775-1', 'auto');
-        ga('send', 'pageview');
+        $(window).scroll(function(){
+
+  var wScroll = $(this).scrollTop();
+
+  if(wScroll > $('.portfolio-grid').offset().top - ($(window).height() / 1.2)) {
+
+    $('.portfolio-grid figure').each(function(i){
+
+      setTimeout(function(){
+        $('.portfolio-grid figure').eq(i).addClass('is-showing');
+      }, 150 * (i+1));
+    });
+
+  }
+
+});
+
     </script>
-    <script>
-        $('.menu-handle').on('click', function() {
-            $('nav ul').toggleClass('menu-visible');
-        });
-    </script>
-    <script>
-        jQuery(document).ready(function() {
 
-            /* Every time the window is scrolled ... */
-            jQuery(window).scroll(function() {
-
-                /* Check the location of each desired element */
-                jQuery('.fade-in').each(function(i) {
-
-                    var bottom_of_object = jQuery(this).offset().top + jQuery(this).outerHeight();
-                    var bottom_of_window = jQuery(window).scrollTop() + jQuery(window).height();
-
-                    /* If the object is completely visible in the window, fade it it */
-                    if (bottom_of_window > bottom_of_object) {
-
-                        jQuery(this).animate({
-                            'opacity': '1'
-                        }, 500);
-
-                    }
-
-                });
-
-            });
-
-        });
-    </script>
 </body>
 
 </html>
