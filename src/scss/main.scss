@@ -2,12 +2,7 @@
 * ITCSS Global SASS
 * Source: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
 */
-.example {
-    display: flex;
-    transition: all .5s;
-    user-select: none;
-    background: linear-gradient(to bottom, white, black);
-}
+
 @import '01-settings';
 @import '02-tools';
 @import '03-generic';

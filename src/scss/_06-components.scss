@@ -62,10 +62,30 @@
 
 /* Header */
 
+
+/* Typed-js css */
+
+.typed-cursor{
+    opacity: 1;
+    animation: blink 0.7s infinite;
+    color: $accent;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.intro-heading {
+        font-family: $heading;
+    font-size: 42px;
+    line-height: 1.5em;
+    margin-bottom: 2em;
+}
 #particles-js {}
 
 .homepage-hero {
-    background-color: $primaryColor;
+    background-image: url(../img/hero-image.jpg);
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -82,7 +102,7 @@
     background-repeat: no-repeat;
     left: 0;
     top: 0;
-        background-size: cover;
+    background-size: cover;
 }
 
 .hero-height {
@@ -137,14 +157,14 @@
 .left-text-intro {
     margin-top: 2em;
     text-align: left;
-    height: 250px;
+    // height: 250px;
     padding-right: 40px;
 }
 
 .right-text-intro {
     margin-top: 2em;
     text-align: right;
-    height: 250px;
+    // height: 250px;
     padding-left: 40px;
 }
 
@@ -208,6 +228,18 @@
 
 a:hover .caption {
     opacity: 1;
+}
+
+// Parallax
+.portfolio-grid figure {
+    position: relative;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease-in-out;
+    &.is-showing {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 .contact-hero {
@@ -427,4 +459,17 @@ a:hover .caption {
     background-size: cover;
     position: relative;
     background-position: 50% 50%;
+}
+
+.portfolio-intro {
+    padding: 50px !important;
+    background: $lightGreyOne;
+}
+
+.portfolio-block-height {
+    min-height: 200px;
+}
+
+.portfolio-block-height-small {
+    min-height: 100px;
 }
