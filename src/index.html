@@ -4,9 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>ackee creative | freelancer Winchester</title>
-    <meta name="description" content="">
+    <title>ackee | Ed Stennett's portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ackee is the portfolio of me, Ed Stennett, a Winchester based designer" />
+    <link rel="canonical" href="http://ackeecreative.com/" />
+
+    <meta name="format-detection" content="telephone=no" />
+<!--    <meta name="google-site-verification" content="" />-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="ackee is the portfolio of me, Ed Stennett, a Winchester based designer" />
+    <meta name="twitter:site" content="@edstennett" />
+    <meta name="twitter:title" content="ackee | Winchester based designer" />
+    <meta name="twitter:image" content="https://images.pexels.com/photos/87646/horsehead-nebula-dark-nebula-constellation-orion-87646.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" />
+    <meta property="og:description" content="ackee is the portfolio of me, Ed Stennett, a Winchester based designer" />
+    <meta property="og:image" content="https://images.pexels.com/photos/87646/horsehead-nebula-dark-nebula-constellation-orion-87646.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="ackee" />
+    <meta property="og:title" content="ackee | Winchester based designer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://ackeecreative.com/" />
+
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link href="http://allfont.net/allfont.css?fonts=league-spartan" rel="stylesheet" type="text/css" />
@@ -210,23 +227,22 @@
         });
     </script>
     <script>
-        $(window).scroll(function(){
+        $(window).scroll(function() {
 
-  var wScroll = $(this).scrollTop();
+            var wScroll = $(this).scrollTop();
 
-  if(wScroll > $('.portfolio-grid').offset().top - ($(window).height() / 1.2)) {
+            if (wScroll > $('.portfolio-grid').offset().top - ($(window).height() / 1.2)) {
 
-    $('.portfolio-grid figure').each(function(i){
+                $('.portfolio-grid figure').each(function(i) {
 
-      setTimeout(function(){
-        $('.portfolio-grid figure').eq(i).addClass('is-showing');
-      }, 150 * (i+1));
-    });
+                    setTimeout(function() {
+                        $('.portfolio-grid figure').eq(i).addClass('is-showing');
+                    }, 150 * (i + 1));
+                });
 
-  }
+            }
 
-});
-
+        });
     </script>
 
 </body>
