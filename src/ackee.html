@@ -80,7 +80,7 @@
         <div class="central-text-intro container">
             <div class="twelve columns">
                 <h3 class="fade-out">intro</h3>
-                <p class="fade-out">ackee is a site designed to showcase work by Winchester based UX Designer Ed Stennett. With over three years agency experience and a strong passion for pixel perfect design and beatiful user experiences, the site showcases recent work, concepts and ideas.</p>
+                <p class="fade-out">ackee is a portfolio site for me. It was been designed to showcase my recent projects in simple, yet beautiful way. Rather than use a template or Wordpress theme, I chose to design and handcode the site. This gave me complete design control and allowed me to apply the unique identity throughout.</p>
                 <hr class="divider">
             </div>
         </div>
@@ -94,7 +94,7 @@
         <div class="container small-text-block">
             <div class="six columns left-text-intro">
                 <h3 class="fade-out">identity</h3>
-                <p class="fade-out">Ed is a passionate and experienced designer, specialising in UX design and branding. ackee is site hand coded by Ed to showcase some of his work.</p>
+                <p class="fade-out">Rather than create an 'Ed Stennett' identity, I wanted to do something different, so I came up with ackee. The pallette is simple yet unique with objective being to create a brand that sits in the background and let's the work it's showcasing speak for itself.</p>
             </div>
         </div>
     </section>
@@ -107,7 +107,7 @@
         <div class="container small-text-block">
             <div class="six columns offset-by-six right-text-intro">
                 <h3 class="fade-out">site</h3>
-                <p class="fade-out">Branding and rebranding<br> Web design and development<br> User interface design and user expierience design<br> Grahpic and print design<br> 2D and 3D Animation</p>
+                <p class="fade-out">This was the first site I have made properly without having to rely on css frameworks like bootstrap or online templates to start me off. The site was handcoded with aim to be as lightweight as possible. It gave me an oppurtunity to play around with gulp and npm and the main focus was to keep file sizes down. It was also the first site I've done that uses an ITCSS structure. with a final main.css file size of 19KB, I feel I've stuck to the initial objective well.</p>
             </div>
         </div>
     </section>
@@ -120,8 +120,8 @@
     <section>
         <div class="container small-text-block">
             <div class="six columns left-text-intro">
-                <h3 class="fade-out">about</h3>
-                <p class="fade-out">Ed is a passionate and experienced designer, specialising in UX design and branding. ackee is site hand coded by Ed to showcase some of his work.</p>
+                <h3 class="fade-out">build</h3>
+                <p class="fade-out">UX is big part of everything I do, and even though this is a 'static' site, very subtle parallax effects through out gives a user a desire to scroll through the page. I looked to spend time at the end, fine tuning the details to make it a truly postitive user experience.</p>
             </div>
         </div>
     </section>
@@ -231,33 +231,7 @@
             $('nav ul').toggleClass('menu-visible');
         });
     </script>
-        <script>
-        $(document).ready(function() {
 
-            /* Every time the window is scrolled ... */
-            $(window).scroll(function() {
-
-                /* Check the location of each desired element */
-                $('.fade-in').each(function(i) {
-
-                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-                    var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-                    /* If the object is completely visible in the window, fade it it */
-                    if (bottom_of_window > bottom_of_object) {
-
-                        $(this).animate({
-                            'opacity': '1'
-                        }, 500);
-
-                    }
-
-                });
-
-            });
-
-        });
-    </script>
 </body>
 
 </html>
