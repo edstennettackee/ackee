@@ -133,17 +133,19 @@
 /* Body */
 
 .central-text-intro {
-    margin-top: 2em;
+    padding: 50px 0;
     text-align: center;
-    min-height: 250px;
+    // min-height: 250px;
 }
 
 .text-block {
-    min-height: 550px;
+     padding: 50px 0;
+   //  min-height: 550px;
 }
 
 .small-text-block {
-    min-height: 250px;
+     padding: 50px 0;
+   // min-height: 300px;
 }
 
 .grey-text-block {
@@ -157,14 +159,12 @@
 .left-text-intro {
     margin-top: 2em;
     text-align: left;
-    // height: 250px;
     padding-right: 40px;
 }
 
 .right-text-intro {
     margin-top: 2em;
     text-align: right;
-    // height: 250px;
     padding-left: 40px;
 }
 
@@ -462,14 +462,13 @@ a:hover .caption {
 }
 
 .portfolio-intro {
-    padding: 50px !important;
     background: $lightGreyOne;
 }
 
 .portfolio-block-height {
-    min-height: 200px;
+    //min-height: 200px;
 }
 
 .portfolio-block-height-small {
-    min-height: 100px;
+    // min-height: 100px;
 }

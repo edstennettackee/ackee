@@ -104,46 +104,48 @@
     </section>
 
     <section>
-        <div class="container fade-out">
-            <div class="six-no-padding columns image-blur">
-                <figure>
-                    <a href="uwork.html">
-                        <span class="caption"> <h3>uWork</h3>
+        <div class="container">
+            <div class="portfolio-grid">
+                <div class="six-no-padding u-pull-left columns image-blur">
+                    <figure>
+                        <a href="uwork.html">
+                            <span class="caption"> <h3>uWork</h3>
                     <hr class="hr-full-width">
                     <p>Design   |   Branding   |   UX   |   UI</p></span>
-                        <img src="img/uwork-hero.png" class="img-responsive" alt="uwork logo on green background">
-                    </a>
-                </figure>
-            </div>
-            <div class="six-no-padding columns image-blur">
-                <figure>
-                    <a href="ackee.html">
-                        <span class="caption"> <h3>ackee</h3>
+                            <img src="img/uwork-hero.png" class="img-responsive" alt="uwork logo on green background">
+                        </a>
+                    </figure>
+                </div>
+                <div class="six-no-padding u-pull-left columns image-blur">
+                    <figure>
+                        <a href="ackee.html">
+                            <span class="caption"> <h3>ackee</h3>
                     <hr class="hr-full-width">
                     <p>Web Design   |   Branding</p></span>
-                        <img src="img/ackee-hero.jpg" class="img-responsive" alt="ackee logo on dark background">
-                    </a>
-                </figure>
-            </div>
-            <div class="six-no-padding columns image-blur">
-                <figure>
-                    <a href="jamesfalconer.html">
-                        <span class="caption"> <h3>James Falconer</h3>
+                            <img src="img/ackee-hero.jpg" class="img-responsive" alt="ackee logo on dark background">
+                        </a>
+                    </figure>
+                </div>
+                <div class="six-no-padding u-pull-left columns image-blur">
+                    <figure>
+                        <a href="jamesfalconer.html">
+                            <span class="caption"> <h3>James Falconer</h3>
                     <hr class="hr-full-width">
                     <p>Web Design</p></span>
-                        <img src="img/jf-hero.jpg" class="img-responsive" alt="dark image from James Falconer's site with a lightbulb">
-                    </a>
-                </figure>
-            </div>
-            <div class="six-no-padding columns image-blur">
-                <figure>
-                    <a href="cgm.html">
-                        <span class="caption"> <h3>CGM</h3>
+                            <img src="img/jf-hero.jpg" class="img-responsive" alt="dark image from James Falconer's site with a lightbulb">
+                        </a>
+                    </figure>
+                </div>
+                <div class="six-no-padding u-pull-left columns image-blur">
+                    <figure>
+                        <a href="cgm.html">
+                            <span class="caption"> <h3>CGM</h3>
                     <hr class="hr-full-width">
                     <p> Web Design   |   Branding</p></span>
-                        <img src="img/cgm-ipad.jpg" class="img-responsive" alt="ipad being used showing cgm site">
-                    </a>
-                </figure>
+                            <img src="img/cgm-ipad.jpg" class="img-responsive" alt="young couple smiling from cgm site">
+                        </a>
+                    </figure>
+                </div>
             </div>
             <svg width="100%" height="10px" xmlns="http://www.w3.org/2000/svg">
             <filter id="blur1">
@@ -242,6 +244,24 @@
     <script>
         $('.menu-handle').on('click', function() {
             $('nav ul').toggleClass('menu-visible');
+        });
+    </script>
+    <script>
+        $(window).scroll(function() {
+
+            var wScroll = $(this).scrollTop();
+
+            if (wScroll > $('.portfolio-grid').offset().top - ($(window).height() / 1.2)) {
+
+                $('.portfolio-grid figure').each(function(i) {
+
+                    setTimeout(function() {
+                        $('.portfolio-grid figure').eq(i).addClass('is-showing');
+                    }, 150 * (i + 1));
+                });
+
+            }
+
         });
     </script>
 </body>
