@@ -37,9 +37,15 @@ gulp.task('html', function(){
 		.pipe(gulp.dest('./dist'));
 });
 
+
 gulp.task('img', function () {
     return gulp.src('./src/img/*')
         .pipe(gulp.dest('./dist/img'));
+});
+
+gulp.task('php', function(){
+	return gulp.src('./src/*.php')
+		.pipe(gulp.dest('./dist'));
 });
 
 gulp.task('png', function () {
@@ -67,4 +73,4 @@ function connectOptions(browser, port, live) {
 
 gulp.task('connect', connect.server(connectOptions('Google Chrome', 8000, 35729)));
 
-gulp.task('default', ['sass', 'html', 'js', 'img', 'png', 'connect', 'watch'])
+gulp.task('default', ['sass', 'html', 'php', 'js', 'img', 'png', 'connect', 'watch'])

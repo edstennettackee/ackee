@@ -20,7 +20,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+// Contact form
 
+$(document).ready(function(){
+  $('#contact-form').on('submit',function(e) {
+  $.ajax({
+      url:'contact.php',
+      data:$(this).serialize(),
+      type:'POST',
+      success:function(data){
+        console.log(data);
+        //Success Message == 'Title', 'Message body', Last one leave as it is
+	    swal("¡Success!", "Message sent!", "success");
+      },
+      error:function(data){
+        //Error Message == 'Title', 'Message body', Last one leave as it is
+	    swal("Oops...", "Something went wrong :(", "error");
+      }
+    });
+    e.preventDefault(); //This is to Avoid Page Refresh and Fire the Event "Click"
+  });
+});
 
 
 ! function(window, document, $) {
@@ -627,103 +647,5 @@ particlesJS('particles-js',
 }
 
 );
-
-/*
- * Canvas Based Material Design Button
- * 2015 by Kevin Gimbel <http://kevingimbel.com>
- */
-
-function drawCircle(data) {
-  var canvas = event.target;
-  canvas.width =  150;
-  canvas.height =  50;
-  var context = canvas.getContext('2d');
-	var centerX = data.X || canvas.width / 2;
-  var centerY =  data.Y || canvas.height / 2;
-  var radius = data.radius || 70;
-  var i = 1;
-  var iterations = 25;
-  var resetColor = data.bg || '#fff';
-  /*
-   * This animation will be repeated until i is bigger than 50 
-   */
-  var makeCircle = function() {    
-    context.beginPath();
-    context.arc(centerX, centerY, radius + (i * 10), 0, 2 * Math.PI, false);
-    context.fillStyle = data.color || 'green';
-    context.fill();
-    
-    if(i === iterations) {
-    	context.fillStyle = resetColor;
-    	context.fill();
-  	}
-    
-    if(i++ < iterations) {
-       window.requestAnimationFrame(makeCircle);
-    }
-  }
-  window.requestAnimationFrame(makeCircle);
-}
-
-/*
- * Function to shade or blend colors.
- * via http://stackoverflow.com/a/13542669
- * I've no idea what exactly happens here to be honest. 
- */
-function shadeBlend(p,c0,c1) {
-    var n=p<0?p*-1:p,u=Math.round,w=parseInt;
-    if(c0.length>7){
-        var f=c0.split(","),t=(c1?c1:p<0?"rgb(0,0,0)":"rgb(255,255,255)").split(","),R=w(f[0].slice(4)),G=w(f[1]),B=w(f[2]);
-        return "rgb("+(u((w(t[0].slice(4))-R)*n)+R)+","+(u((w(t[1])-G)*n)+G)+","+(u((w(t[2])-B)*n)+B)+")"
-    }else{
-        var f=w(c0.slice(1),16),t=w((c1?c1:p<0?"#000000":"#FFFFFF").slice(1),16),R1=f>>16,G1=f>>8&0x00FF,B1=f&0x0000FF;
-        return "#"+(0x1000000+(u(((t>>16)-R1)*n)+R1)*0x10000+(u(((t>>8&0x00FF)-G1)*n)+G1)*0x100+(u(((t&0x0000FF)-B1)*n)+B1)).toString(16).slice(1)
-    }
-}
-
-/*
- * turn rgb into a hex string. Taken from SO.
- * via http://stackoverflow.com/a/5624139
- */
-function rgbToHex(rgb) {
-  var r,g,b;
-  if(typeof rgb === 'string') {
-    // match all numbers inside the RGB string.
-    rgb = rgb.match(/\d+/g);
-   	r = +rgb[0];
-    g = +rgb[1];
-    b = +rgb[2];
-  } else {
-    r = rgb.r;
-    g = rgb.g;
-    b = rgb.b;
-  }
-  color = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-  return color;
-}
-
-document.addEventListener('click', function(event) {
-  // check if this click is on a canvas
-  var isCanvas = (event.toElement.nodeName.toLowerCase() === 'canvas');
-  // and see if it's a canvas with the class md-button!
-  var isMdButtonCanvas = (event.toElement.classList.toString().indexOf('md-button-canvas') > -1);
-  
-  if(isCanvas && isMdButtonCanvas) {
-    // prevent default only for testing!
-    event.preventDefault();
-    // If this is one of the canvas button, draw the circle!
-    var styles = window.getComputedStyle(event.target.parentNode);
-  	var bgColor = rgbToHex(styles['background-color']);
-    console.log(bgColor);
-  	drawCircle({
-      el: event.target,
-      X: event.offsetX,
-      Y: event.offsetY,
-      bg: bgColor,
-      color: shadeBlend(-0.08,bgColor),
-      radius: 15
-    });
-  }
-});
 
 console.log("Hello");
