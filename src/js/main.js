@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Contact form
+// Contact form with the lovely sweetAlert
 
 $(document).ready(function(){
   $('#contact-form').on('submit',function(e) {
@@ -30,15 +30,13 @@ $(document).ready(function(){
       type:'POST',
       success:function(data){
         console.log(data);
-        //Success Message == 'Title', 'Message body', Last one leave as it is
-	    swal("¡Success!", "Message sent!", "success");
+	    swal("Success!", "Message sent. I will get back to you as soon as possible.", "success");
       },
       error:function(data){
-        //Error Message == 'Title', 'Message body', Last one leave as it is
-	    swal("Oops...", "Something went wrong :(", "error");
+	    swal("Oh no...", "It's not you, it's me. Please try again or test your internet connection.", "error");
       }
     });
-    e.preventDefault(); //This is to Avoid Page Refresh and Fire the Event "Click"
+    e.preventDefault();
   });
 });
 

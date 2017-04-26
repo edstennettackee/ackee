@@ -1,7 +1,7 @@
 <?php
   $to = 'edward.stennett@ackeecreative.com' . "\r\n";
   $subject = 'Subject';
-  $name = $_POST['nombre'];
+  $name = $_POST['name'];
   $email = $_POST['email']; 
 
   $message = "************************************************** \r\n" .

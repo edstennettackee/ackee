@@ -848,7 +848,7 @@ body.stop-scrolling {
 }
 
 .sweet-overlay {
-    background-color: black;
+    background-color: $black;
     /* IE8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
     /* IE8 */
@@ -863,8 +863,8 @@ body.stop-scrolling {
 }
 
 .sweet-alert {
-    background-color: white;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: $lightGreyTwo;
+    font-family: inherit;
     width: 478px;
     padding: 17px;
     border-radius: 5px;
@@ -890,7 +890,7 @@ body.stop-scrolling {
 }
 
 .sweet-alert h2 {
-    color: #575757;
+    color: $primaryColor;
     font-size: 30px;
     text-align: center;
     font-weight: 600;
@@ -903,7 +903,7 @@ body.stop-scrolling {
 }
 
 .sweet-alert p {
-    color: #797979;
+    color: $secondaryColor;
     font-size: 16px;
     text-align: center;
     font-weight: 300;
@@ -1072,13 +1072,13 @@ body.stop-scrolling {
 }
 
 .sweet-alert button {
-    background-color: #8CD4F5;
-    color: white;
+    background-color: $standardGrey !important;
+    color: $white;
     border: none;
     box-shadow: none;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
-    -webkit-border-radius: 4px;
+    font-family: $heading;
     border-radius: 5px;
     padding: 10px 32px;
     margin: 26px 5px 0 5px;
@@ -1091,11 +1091,12 @@ body.stop-scrolling {
 }
 
 .sweet-alert button:hover {
-    background-color: #7ecff4;
+    background-color: $darkGreyTwo;
+    box-shadow: 0 0 24x rgba(128, 179, 235, 0.5), inset 0 0 0 2px rgba(0, 0, 0, 0.25);
 }
 
 .sweet-alert button:active {
-    background-color: #5dc2f1;
+    background-color: $darkGreyTwo !important;
 }
 
 .sweet-alert button.cancel {
