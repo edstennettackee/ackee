@@ -90,7 +90,7 @@ a {
     font-family: $body;
     text-decoration: none;
     color: inherit;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 a:hover,
@@ -210,7 +210,7 @@ textarea:focus {
 label {
     color: $white;
     font-size: 18px;
-    font-weight: normal;
+    font-weight: 400;
     position: absolute;
     pointer-events: none;
     left: 5px;

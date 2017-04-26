@@ -1,3 +1,48 @@
+function playVideo(el) {
+            var videoId = el.data('video');
+            var video = document.getElementById(videoId);
+
+            if (video.paused) {
+                // Play the video
+                video.play();
+                el.removeClass('paused').addClass('playing');
+            } else {
+                // Pause the video
+                video.pause();
+                el.removeClass('playing').addClass('paused');
+            }
+        }
+
+        $(document).on('click', '.js-video-control', function(e) {
+            playVideo($(this));
+            e.preventDefault();
+        });
+
+// Contact form with the lovely sweetAlert
+
+$(document).ready(function(){
+  $('#contact-form').on('submit',function(e) {
+  $.ajax({
+      url:'contact.php',
+      data:$(this).serialize(),
+      type:'POST',
+      success:function(data){
+        console.log(data);
+	    swal("Success!", "Message sent. I will get back to you as soon as possible.", "success");
+      },
+      error:function(data){
+	    swal("Oh no...", "It's not you, it's me. Please try again or test your internet connection.", "error");
+      }
+    });
+    e.preventDefault();
+  });
+});
+        $('.menu-handle').on('click', function() {
+            $('nav ul').toggleClass('menu-visible');
+        });
+
+        
+
 // The MIT License (MIT)
 
 // Typed.js | Copyright (c) 2016 Matt Boldt | www.mattboldt.com
@@ -19,26 +64,6 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-
-// Contact form with the lovely sweetAlert
-
-$(document).ready(function(){
-  $('#contact-form').on('submit',function(e) {
-  $.ajax({
-      url:'contact.php',
-      data:$(this).serialize(),
-      type:'POST',
-      success:function(data){
-        console.log(data);
-	    swal("Success!", "Message sent. I will get back to you as soon as possible.", "success");
-      },
-      error:function(data){
-	    swal("Oh no...", "It's not you, it's me. Please try again or test your internet connection.", "error");
-      }
-    });
-    e.preventDefault();
-  });
-});
 
 
 ! function(window, document, $) {

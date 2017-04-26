@@ -127,7 +127,7 @@
     </section>
 
 
-        <section class="contact-form">
+    <section class="contact-form">
         <div class="twelve columns contact-hero ">
         </div>
         <div class="container">
@@ -195,32 +195,15 @@
         ga('create', 'UA-97851775-1', 'auto');
         ga('send', 'pageview');
     </script>
-    <script>
-        $('.menu-handle').on('click', function() {
-            $('nav ul').toggleClass('menu-visible');
-        });
-    </script>
 
     <script>
-        function playVideo(el) {
-            var videoId = el.data('video');
-            var video = document.getElementById(videoId);
-
-            if (video.paused) {
-                // Play the video
-                video.play();
-                el.removeClass('paused').addClass('playing');
-            } else {
-                // Pause the video
-                video.pause();
-                el.removeClass('playing').addClass('paused');
-            }
-        }
-
-        $(document).on('click', '.js-video-control', function(e) {
-            playVideo($(this));
-            e.preventDefault();
-        });
+       $("#video1").hover(function(event) {
+    if(event.type === "mouseenter") {
+        $(this).attr("controls", "");
+    } else if(event.type === "mouseleave") {
+        $(this).removeAttr("controls");
+    }
+});
     </script>
 </body>
 
