@@ -756,24 +756,9 @@ fieldset {
     width: 100%;
 }
 
-.media-overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: cover;
-    background-image: url(../img/play-button.svg);
-    background-color: transparent!important;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 1;
-    cursor: pointer;
-    outline: none;
-    border: 0px;
-}
 
 .showreel {
+    cursor: pointer;
     margin: 1em auto;
     display: block;
     position: relative;
@@ -781,42 +766,6 @@ fieldset {
     &:hover {
         +.video-control {
             opacity: 0.8;
-        }
-    }
-}
-
-.video-control {
-    font-size: 4em;
-    opacity: 0;
-    transition: opacity 0.3s;
-    color: #333;
-    text-align: center;
-    &:hover {
-        opacity: 1;
-    }
-    &:before,
-    &:after {
-        position: absolute;
-        width: 1em;
-        height: 1em;
-        top: 50%;
-        left: 50%;
-        margin: -0.5em 0 0 -0.5em;
-    }
-    &:before {
-        content: url(../img/play-button.svg);
-    }
-    &:after {
-        content: url(../img/pause-button.svg);
-    }
-    &.paused {
-        &:after {
-            opacity: 0;
-        }
-    }
-    &.playing {
-        &:before {
-            opacity: 0;
         }
     }
 }
