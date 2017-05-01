@@ -1,1 +1,4 @@
 ErrorDocument 404 http://www.ackeecreative.com/404page.html
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
