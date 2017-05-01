@@ -141,23 +141,21 @@
 /* Body */
 
 .central-text-intro {
-    padding: 50px 0;
+    padding: 50px 10px;
     text-align: center;
-    // min-height: 250px;
 }
 
 .text-block {
-    padding: 50px 0;
-    //  min-height: 550px;
+    padding: 50px 10px;
 }
 
 .small-text-block {
-    padding: 50px 0;
-    // min-height: 300px;
+    padding: 50px 10px;
 }
 
 .grey-text-block {
     background-color: $lightGreyTwo;
+    padding: 0px 10pxl
 }
 
 .divider {
@@ -168,12 +166,14 @@
     margin-top: 2em;
     text-align: left;
     padding-right: 40px;
+    padding-left: 10px;
 }
 
 .right-text-intro {
     margin-top: 2em;
     text-align: right;
     padding-left: 40px;
+    padding-right: 10px;
 }
 
 .image-blur {
